@@ -1,0 +1,15 @@
+### pkg download from Ansible Playbooks
+## make directory
+- name: directory make /usr/local/src/archive
+  file: path={{ archive_dir }} state=directory owner=root group=root mode=0755
+
+## download aerospike
+- name: download aerospike
+  get_url: url={{ aero_url }} dest={{ archive_dir }}/{{ aero_pkg_tar }}
+## download AMC
+- name: download AMC
+  get_url: url={{ amc_url }} dest={{ archive_dir }}/{{ amc_pkg_rpm }}
+
+## unarchive pkg
+- name: unarchive aerospike pkg
+  command: tar xvfz {{ archive_dir }}/{{ aero_pkg_tar }} -C {{ archive_dir }}/ creates={{ archive_dir }}/{{ aero_pkg }}
