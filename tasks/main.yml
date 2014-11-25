@@ -1,2 +1,4 @@
----
-# tasks file for aerospike/
+### aerospike main tasks
+- include: pkgdownload.yml
+- include: pkgyum.yml
+- include: filedirmk.yml
