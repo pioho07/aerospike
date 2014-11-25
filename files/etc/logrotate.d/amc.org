@@ -1,8 +1,0 @@
-/var/log/amc/error.log{
-     daily
-     rotate 90
-     copytruncate
-     dateext
-     compress
-}
-
