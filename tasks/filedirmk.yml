@@ -1,0 +1,23 @@
+### Add file & directory from Ansible Playbooks
+## copy file
+- name: copy file to aerospike.org
+  copy: src=etc/aerospike/{{ item }} dest=/etc/aerospike/ owner=root group=root mode=0644
+  with_items:
+    - aerospike.conf.org
+    - aerospike_ssd.conf.org
+
+- name: copy file to logrotate aerospike,amc
+  copy: src=etc/logrotate.d/{{ item }} dest=/etc/logrotate.d/ owner=root group=root mode=0644
+  with_items:
+    - aerospike.org
+    - amc.org
+
+## copy file
+# /etc/aerospike/aerospike.conf
+- name: file add aerospike.conf
+  template: src=etc/aerospike/aerospike.conf.j2 dest=/etc/aerospike/aerospike.conf
+# /etc/logrotate.d/
+- name: file add /etc/logrotate.d/aerospike
+  template: src=etc/logrotate.d/aerospike.j2 dest=/etc/logrotate.d/aerospike
+- name: file add /etc/logrotate.d/amc
+  template: src=etc/logrotate.d/amc.j2 dest=/etc/logrotate.d/amc

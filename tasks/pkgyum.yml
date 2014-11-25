@@ -1,0 +1,16 @@
+### yum pkg install from Ansible Playbooks
+## install rpm pkg aerospike
+- name: install rpm pkg pythonargparse
+  command: yum localinstall -y {{ archive_dir }}/{{ aero_pkg }}/{{ pythonargparse_rpm }} removes={{ archive_dir }}/{{ aero_pkg }}/{{ pythonargparse_rpm }}
+- name: install rpm pkg aerotools
+  command: yum localinstall -y {{ archive_dir }}/{{ aero_pkg }}/{{ aerotools_rpm }} removes={{ archive_dir }}/{{ aero_pkg }}/{{ aerotools_rpm }}
+- name: install rpm pkg aerospike
+  command: yum localinstall -y {{ archive_dir }}/{{ aero_pkg }}/{{ aero_pkg_rpm }} removes={{ archive_dir }}/{{ aero_pkg }}/{{ aero_pkg_rpm }}
+
+## install yum pkg amc
+- name: install yum gcc
+  yum: name=gcc state=present
+- name: install yum python-devel
+  yum: name=python-devel state=present
+- name: install rpm pkg amc
+  command: yum localinstall -y {{ archive_dir }}/{{ amc_pkg_rpm }} removes={{ archive_dir }}/{{ amc_pkg_rpm }}

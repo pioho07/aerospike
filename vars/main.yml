@@ -1,0 +1,38 @@
+## variables associated with this role
+## aerospike pkg variable
+aero_url:
+  http://www.aerospike.com/download/server/3.3.22/artifact/el6
+aero_pkg_tar:
+  aerospike-server-community-3.3.22-el6.tgz
+aero_pkg:
+  aerospike-server-community-3.3.22-el6
+aero_pkg_rpm:
+  aerospike-server-community-3.3.21.el6.x86_64.rpm
+aerotools_rpm:
+  aerospike-tools-3.3.23.el6.x86_64.rpm
+pythonargparse_rpm:
+  python-argparse-1.2.1-2.el6.noarch.rpm
+
+## amc pkg variable
+amc_url:
+  http://www.aerospike.com/download/amc/3.4.10/artifact/el6
+amc_pkg_rpm:
+  aerospike-amc-community-3.4.10-el5.x86_64.rpm
+
+## aerospike.conf modify
+svcthreads_num:
+  4
+tranqueues_num:
+  4
+tranthreadsperque_num:
+  4
+ns_memsize:
+  4G
+ns_name:
+  test
+
+## os modify
+rotate_day:
+  14
+archive_dir:
+  /usr/local/src/archive
