@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   author: pioho07
-  description: aerospike_role
+  description: aerospike_role roleversiontest
   company: cyberz
   # Some suggested licenses:
   # - BSD (default)
@@ -12,7 +12,6 @@ galaxy_info:
   # - CC-BY
   license: license (GPLv2, CC-BY, etc)
   min_ansible_version: 1.6
-  version test
   #
   # Below are all platforms currently available. Just uncomment
   # the ones that apply to your role. If you don't see your 
